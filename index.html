@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Search Javascript | Almeida Space</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="brand">
+                    <h1>Almeida Space</h1>
+                </div>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <h1>Live Search Javascript</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.</p>
+
+                <form action="#" class="search-form">
+                    <i class="bx bx-search"></i>
+                    <input type="text" name="search" id="search" placeholder="Search">
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <section class="article" id="article">
+        <div class="container">
+            <div class="content">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="bx bxl-javascript"></i>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="article-title">Modern Javascript Explained For Dinosaurs</h2>
+                        <p class="article-description">
+                            This is probably the best explanation I’ve ever seen about modern frontend development
+                            workflow, and if you are new to JavaScript or web development, you must read this article.
+                        </p>
+
+                        <div class="creater">
+                            <img src="https://images.unsplash.com/photo-1543269664-7eef42226a21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                                alt="">
+                            <div class="info">
+                                <h4 class="name">Yunus Almeida</h4>
+                                <p>Software Engineer</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="bx bxl-dev-to"></i>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="article-title">The Web Developer Roadmap</h2>
+                        <p class="article-description">
+                            This is probably the best explanation I’ve ever seen about modern frontend development
+                            workflow, and if you are new to JavaScript or web development, you must read this article.
+                        </p>
+
+                        <div class="creater">
+                            <img src="https://images.unsplash.com/photo-1543269664-7eef42226a21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                                alt="">
+                            <div class="info">
+                                <h4 class="name">Yunus Almeida</h4>
+                                <p>Software Engineer</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="bx bxl-react"></i>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="article-title">Web Architecture 101</h2>
+                        <p class="article-description">
+                            This is probably the best explanation I’ve ever seen about modern frontend development
+                            workflow, and if you are new to JavaScript or web development, you must read this article.
+                        </p>
+
+                        <div class="creater">
+                            <img src="https://images.unsplash.com/photo-1543269664-7eef42226a21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                                alt="">
+                            <div class="info">
+                                <h4 class="name">Yunus Almeida</h4>
+                                <p>Software Engineer</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#search").keyup(function () {
+                var search = $(this).val();
+
+                $('#article .content .card').each(function () {
+                    if ($(this).text().search(new RegExp(search, "i")) < 0) {
+                        $(this).fadeOut();
+                    } else {
+                        $(this).show();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
