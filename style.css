@@ -33,6 +33,12 @@ ul {
   padding: 0 200px;
 }
 
+@media screen and (max-width: 768px) {
+  .container .content {
+    padding: 0 20px;
+  }
+}
+
 section {
   padding: 70px 0;
 }
@@ -142,6 +148,12 @@ header .content .search-form input:focus {
   outline: none;
 }
 
+@media screen and (max-width: 768px) {
+  header {
+    padding: 20px 20px 50px;
+  }
+}
+
 .article .card {
   background: #FFFFFF;
   border-radius: 5px;
@@ -200,5 +212,27 @@ header .content .search-form input:focus {
           transform: translateY(-5px);
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .article .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .article .card .card-content .article-title {
+    font-size: 18px;
+  }
+  .article .card .card-content .article-description {
+    font-size: 14px;
+  }
+  .article .card .card-content .creater img {
+    width: 24px;
+    height: 24px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
